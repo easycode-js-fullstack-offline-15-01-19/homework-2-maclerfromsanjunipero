@@ -123,35 +123,18 @@ switch (a) {
         break;
 }
 
-// Задача 2.1 ----------------------------------------
+// Задача 2.1 ----------------------------------------x
 
-switch (value) {
-    case `hidden`:
-        value = `visible`;
-        break;
+let a = hidden ;
 
-    default:
-        value = `hidden`;
-        break;
+a = (a === 'hidden') ? a = 'visible' : a = 'hidden' ;
 
-}
 
-// Задача 2.2 ----------------------------------------
+// Задача 2.2 ----------------------------------------x
 
-switch (a) {
-    case 0 :
-        a = 1;
-        break;
+a = (a === 0) ? a = 1 : a < 0 ? a = 'less then zero' : a *= 10;
 
-    case -1 :
-        a = `less then zero`;
-        break;
-
-    default :
-        a *= 10;
-}
-
-//// Задача 2.3 ----------------------------------------
+//// Задача 2.3 ----------------------------------------x
 
 let cars = {
     name: 'Lexus',
@@ -162,17 +145,4 @@ let cars = {
 
 let carsYearsOld = 2019 - car.create;
 
-switch (carsYearsOld) {
-    case 5 :
-    case 6 :
-    case 7 :
-    case 8 :
-    case 9 :
-        console.log('Need Repair');
-        cars.needRepair = true;
-        break;
-
-    default:
-        cars.needRepair = false;
-        break;
-}
+carsYearsOld > 5 ? (console.log('Need repair'), cars.needRepair = true) : cars.needRepair = false;
